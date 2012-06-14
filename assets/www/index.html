@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aids Awareness</title>
+	<meta name="author" content="Nikhil Ranjan http://nikworkz.appspot.com" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<link href="jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="jsShare.css" rel="stylesheet" type="text/css" />
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" src="lib/klass.min.js"></script>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0rc2.min.js"></script>
+	<script type="text/javascript" src="code.photoswipe.jquery-3.0.4.min.js"></script>
+	<script src="jsShare.js" type="text/javascript"></script>
+	<script type="text/javascript" src="contact.js"></script>
+	
+	<script type="text/javascript">
+		
+		/*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				$('#buttons').jsShare({ maxwidth: 275 , googlebuzz: false, reddit: false, messenger: false});
+				$('div.gallery-page')
+					.live('pageshow', function(e){
+						
+						var 
+							currentPage = $(e.target),
+							options = {},
+							photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options,  currentPage.attr('id'));
+							
+						return true;
+						
+					})
+					
+					.live('pagehide', function(e){
+						
+						var 
+							currentPage = $(e.target),
+							photoSwipeInstance = PhotoSwipe.getInstance(currentPage.attr('id'));
+
+						if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+							PhotoSwipe.detatch(photoSwipeInstance);
+						}
+						
+						return true;
+						
+					});
+				
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+</head>
+
+<body>
+<div data-role="page" id="home" data-theme="e">
+	<div data-role="header" data-position="fixed">
+        <h1>Aids Awareness</h1>
+    </div><!-- /header -->
+	<div data-role="content">	
+		<h1>Menu</h1>
+       <a href="#start" data-role="button" data-icon="arrow-r" data-transition="flip">AIDS Awareness</a>
+       <a href="quiz.html" rel="external" data-role="button" data-icon="info" data-transition="flip">AIDS QUIZ</a>
+       <a href="#feedback" data-role="button" data-icon="grid" data-transition="flip">Contact Us</a>
+       <a href="#share" data-role="button" data-icon="star" data-transition="flip">Share</a>
+	</div><!-- /content -->
+
+    <div data-role="footer" class="ui-bar" data-position="fixed">
+		<a href="#about" data-role="button" data-icon="grid">About Us</a>
+		<a href="#feedback" data-role="button" data-icon="star">Feedback</a>
+		<a href="#share" data-role="button" data-icon="plus">Share</a>
+	</div>
+
+</div><!-- /page -->
+
+<div data-role="page" data-theme="e" id="start" data-add-back-btn="true"> 
+<div data-role="header" data-position="fixed"> 
+<h1>Aids Awareness</h1> 
+</div> 
+<div data-role="content">
+<h3>Index</h3>
+<ul data-role="listview" data-theme="e">
+<li><a href="#hiv">HIV and AIDS</a></li>    
+<li><a href="#sti">Sexually Transmitted Infections</a></li>
+<li><a href="#sex">Sex and Sexuality</a></li>
+<li><a href="#care">Care and Support</a></li>
+<li><a href="#rights">Human Rights</a></li>
+<li><a href="#skills">Life Skills for Young People</a></li>
+<li><a href="#services">List of Services in Delhi</a></li>
+</ul>
+</div> 
+<div data-role="footer" class="ui-bar" data-position="fixed">
+<a href="#about" data-role="button" data-icon="grid">About Us</a>
+<a href="#feedback" data-role="button" data-icon="star">Feedback</a>
+<a href="#share" data-role="button" data-icon="plus">Share</a>
+</div>
+</div> 
+
+
+
+<div data-role="page" data-add-back-btn="true" id="hiv" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>HIV and AIDS</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/006.jpg" rel="external"><img src="images/full/006.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/007.jpg" rel="external"><img src="images/full/007.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/008.jpg" rel="external"><img src="images/full/008.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/009.jpg" rel="external"><img src="images/full/009.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/010.jpg" rel="external"><img src="images/full/010.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/011.jpg" rel="external"><img src="images/full/011.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/012.jpg" rel="external"><img src="images/full/012.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/013.jpg" rel="external"><img src="images/full/013.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/014.jpg" rel="external"><img src="images/full/014.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/015.jpg" rel="external"><img src="images/full/015.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/016.jpg" rel="external"><img src="images/full/016.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/017.jpg" rel="external"><img src="images/full/017.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/018.jpg" rel="external"><img src="images/full/018.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/019.jpg" rel="external"><img src="images/full/019.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/020.jpg" rel="external"><img src="images/full/020.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/021.jpg" rel="external"><img src="images/full/021.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/022.jpg" rel="external"><img src="images/full/022.jpg" alt="HIV and AIDS" /></a></li>
+			<li><a href="images/full/023.jpg" rel="external"><img src="images/full/023.jpg" alt="HIV and AIDS" /></a></li>
+            <li><a href="images/full/024.jpg" rel="external"><img src="images/full/024.jpg" alt="HIV and AIDS" /></a></li>		
+		</ul>
+	</div>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="sti" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>Sexually Transmitted Infections</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/025.jpg" rel="external"><img src="images/full/025.jpg" alt="Sexually Transmitted Infections" /></a></li>
+			<li><a href="images/full/026.jpg" rel="external"><img src="images/full/026.jpg" alt="Sexually Transmitted Infections" /></a></li>
+			<li><a href="images/full/027.jpg" rel="external"><img src="images/full/027.jpg" alt="Sexually Transmitted Infections" /></a></li>
+			<li><a href="images/full/028.jpg" rel="external"><img src="images/full/028.jpg" alt="Sexually Transmitted Infections" /></a></li>
+			<li><a href="images/full/029.jpg" rel="external"><img src="images/full/029.jpg" alt="Sexually Transmitted Infections" /></a></li>
+		</ul>
+	</div>
+	<br><br><br>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="sex" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>Sex and Sexuality</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/030.jpg" rel="external"><img src="images/full/030.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/031.jpg" rel="external"><img src="images/full/031.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/032.jpg" rel="external"><img src="images/full/032.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/033.jpg" rel="external"><img src="images/full/033.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/034.jpg" rel="external"><img src="images/full/034.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/035.jpg" rel="external"><img src="images/full/035.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/036.jpg" rel="external"><img src="images/full/036.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/037.jpg" rel="external"><img src="images/full/037.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/038.jpg" rel="external"><img src="images/full/038.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/039.jpg" rel="external"><img src="images/full/039.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/040.jpg" rel="external"><img src="images/full/040.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/041.jpg" rel="external"><img src="images/full/041.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/042.jpg" rel="external"><img src="images/full/042.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/043.jpg" rel="external"><img src="images/full/043.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/044.jpg" rel="external"><img src="images/full/044.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/045.jpg" rel="external"><img src="images/full/045.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/046.jpg" rel="external"><img src="images/full/046.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/047.jpg" rel="external"><img src="images/full/047.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/048.jpg" rel="external"><img src="images/full/048.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/049.jpg" rel="external"><img src="images/full/049.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/050.jpg" rel="external"><img src="images/full/050.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/051.jpg" rel="external"><img src="images/full/051.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/052.jpg" rel="external"><img src="images/full/052.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/053.jpg" rel="external"><img src="images/full/053.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/054.jpg" rel="external"><img src="images/full/054.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/055.jpg" rel="external"><img src="images/full/055.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/056.jpg" rel="external"><img src="images/full/056.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/057.jpg" rel="external"><img src="images/full/057.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/058.jpg" rel="external"><img src="images/full/058.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/059.jpg" rel="external"><img src="images/full/059.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/060.jpg" rel="external"><img src="images/full/060.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/061.jpg" rel="external"><img src="images/full/061.jpg" alt="Sex and Sexuality" /></a></li>
+			<li><a href="images/full/062.jpg" rel="external"><img src="images/full/062.jpg" alt="Sex and Sexuality" /></a></li>
+	
+			
+		</ul>
+	</div>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="care" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>Care and Support</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/063.jpg" rel="external"><img src="images/full/063.jpg" alt="Care and Support" /></a></li>
+			<li><a href="images/full/064.jpg" rel="external"><img src="images/full/064.jpg" alt="Care and Support" /></a></li>
+			<li><a href="images/full/065.jpg" rel="external"><img src="images/full/065.jpg" alt="Care and Support" /></a></li>
+		</ul>
+	</div>
+	<br><br><br>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="rights" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>Human Rights and HIV</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/066.jpg" rel="external"><img src="images/full/066.jpg" alt="Human Rights and HIV" /></a></li>
+			<li><a href="images/full/067.jpg" rel="external"><img src="images/full/067.jpg" alt="Human Rights and HIV" /></a></li>
+			<li><a href="images/full/068.jpg" rel="external"><img src="images/full/068.jpg" alt="Human Rights and HIV" /></a></li>
+			<li><a href="images/full/069.jpg" rel="external"><img src="images/full/069.jpg" alt="Human Rights and HIV" /></a></li>
+			<li><a href="images/full/070.jpg" rel="external"><img src="images/full/070.jpg" alt="Human Rights and HIV" /></a></li>
+		</ul>
+	</div>
+	<br><br>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="skills" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>Life Skills for Young People</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/071.jpg" rel="external"><img src="images/full/071.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/072.jpg" rel="external"><img src="images/full/072.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/073.jpg" rel="external"><img src="images/full/073.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/074.jpg" rel="external"><img src="images/full/074.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/075.jpg" rel="external"><img src="images/full/075.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/076.jpg" rel="external"><img src="images/full/076.jpg" alt="Life Skills for Young People" /></a></li>
+			<li><a href="images/full/077.jpg" rel="external"><img src="images/full/077.jpg" alt="Life Skills for Young People" /></a></li>
+		</ul>
+	</div>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="services" class="gallery-page">
+<div data-role="header" data-position="fixed">
+<h1>List of Services in Delhi</h1> 
+</div>
+	<div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/078.jpg" rel="external"><img src="images/full/078.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/079.jpg" rel="external"><img src="images/full/079.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/080.jpg" rel="external"><img src="images/full/080.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/081.jpg" rel="external"><img src="images/full/081.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/082.jpg" rel="external"><img src="images/full/082.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/083.jpg" rel="external"><img src="images/full/083.jpg" alt="Services in Delhi" /></a></li>
+			<li><a href="images/full/084.jpg" rel="external"><img src="images/full/084.jpg" alt="Services in Delhi" /></a></li>
+		</ul>
+	</div>
+	<div data-role="footer">
+		<a href="#home" data-role="button" data-icon="home">Home</a>
+	</div>
+</div>
+
+
+
+
+<div data-role="page" data-theme="e" id="about" class="gallery-page"> 
+<div data-role="header" data-position="fixed"> 
+<a data-role="button" data-icon="home" href="#home">Home</a>
+<h1>About Us</h1> 
+</div>
+<div data-role="content"> 
+<ul class="gallery">
+	<li><a href="images/full/085.jpg" rel="external"><img src="images/full/085.jpg" alt="UNESCO" /></a></li>
+</ul>
+<h3>Team Members</h3>
+<p>Umang Gulati</p>
+<p><a href="http://facebook.com/niklabh">Nikhil Ranjan</a></p>
+<p>Aditya Hanreja</p>
+<p>Ankit Tyagi</p>
+<p>Sushil Patel</p>
+</div> 
+</div>
+
+
+<div data-role="page" data-theme="e" id="feedback"> 
+<div data-role="header" data-position="fixed"> 
+<a data-role="button" data-icon="home" href="#home">Home</a>
+<h1>Feedback</h1> 
+</div>
+<div data-role="content"> 
+		<div class="contact-thankyou" style="display: none;">
+			Thank you.  Your message has been sent.  We will get back to you as soon as we can.
+		</div>
+		<div class="contact-form">
+			<p class="mandatory">* indicates Manadatory Field</p>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="firstname">First Name*:</label>
+				<input type="text" name="firstname" value="" placeholder="" class="required" id="firstname" />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="surname">Last Name:</label>
+				<input type="text" name="surname" value="" placeholder="" id="surname" />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="email">Email Address*:</label>
+				<input type="email" name="email" value="" placeholder="" class="required" id="email"  />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="mobilephone">Mobile Number:</label>
+				<input type="number" name="mobilephone" value="" placeholder="" id="mobilephone" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="message">Message*:</label>
+				<textarea name="message" id="message" placeholder="" class="required"></textarea>
+			</div>
+			<div class="send"><a href="javascript:;" data-role="button" data-theme="a" data-iconpos="right" id="send-feedback">send feedback</a></div>
+		</div><!-- //.contact-form -->
+
+</div> 
+</div>
+
+<div data-role="page" data-theme="e" id="share"> 
+<div data-role="header" data-position="fixed"> 
+<a data-role="button" data-icon="home" href="#home">Home</a>
+<h1>Spread The Word</h1> 
+</div>
+<div data-role="content"> 
+<div id="demo">
+ <p>Spread the word</p>
+ <div id="buttons">
+ </div>          
+</div>
+</div> 
+</div>
+
+</body>
+</html>
