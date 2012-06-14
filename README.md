@@ -5,4 +5,6 @@ I want to improve the project by adding features like google maps for location o
 There are a number of issues
 -- Share page is not working properly
 -- Feedback page is sending data to a unknown location.
--- True/False section is incomplete 
+-- True/False section is incomplete
+
+The app is made by using PHONEGAP for android. So major code is inside /asset/www folder. 
